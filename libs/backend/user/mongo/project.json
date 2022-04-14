@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/user/mongo",
+  "sourceRoot": "libs/backend/user/mongo/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/user/mongo/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/user/mongo"],
+      "options": {
+        "jestConfig": "libs/backend/user/mongo/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

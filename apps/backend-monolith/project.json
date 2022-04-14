@@ -1,0 +1,52 @@
+{
+  "root": "apps/backend-monolith",
+  "sourceRoot": "apps/backend-monolith/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/backend-monolith",
+        "main": "apps/backend-monolith/src/main.ts",
+        "tsConfig": "apps/backend-monolith/tsconfig.app.json",
+        "assets": ["apps/backend-monolith/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/backend-monolith/src/environments/environment.ts",
+              "with": "apps/backend-monolith/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "backend-monolith:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/backend-monolith/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/backend-monolith"],
+      "options": {
+        "jestConfig": "apps/backend-monolith/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

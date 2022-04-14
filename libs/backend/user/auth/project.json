@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/user/auth",
+  "sourceRoot": "libs/backend/user/auth/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/user/auth/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/user/auth"],
+      "options": {
+        "jestConfig": "libs/backend/user/auth/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
