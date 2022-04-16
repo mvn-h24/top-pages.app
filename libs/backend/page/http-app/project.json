@@ -1,0 +1,22 @@
+{
+  "root": "libs/backend/page/http-app",
+  "sourceRoot": "libs/backend/page/http-app/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/page/http-app/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/page/http-app"],
+      "options": {
+        "jestConfig": "libs/backend/page/http-app/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

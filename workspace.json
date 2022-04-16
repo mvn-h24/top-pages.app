@@ -3,6 +3,8 @@
   "projects": {
     "backend-mongo-monogo": "libs/backend/mongo/monogo",
     "backend-monolith": "apps/backend-monolith",
+    "backend-page-http-app": "libs/backend/page/http-app",
+    "backend-page-mongo": "libs/backend/page/mongo",
     "backend-user-auth": "libs/backend/user/auth",
     "backend-user-mongo": "libs/backend/user/mongo"
   }

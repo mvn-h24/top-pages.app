@@ -18,6 +18,12 @@
       "@top-pages.app/backend/mongo/monogo": [
         "libs/backend/mongo/monogo/src/index.ts"
       ],
+      "@top-pages.app/backend/page/http-app": [
+        "libs/backend/page/http-app/src/index.ts"
+      ],
+      "@top-pages.app/backend/page/mongo": [
+        "libs/backend/page/mongo/src/index.ts"
+      ],
       "@top-pages.app/backend/user/auth": [
         "libs/backend/user/auth/src/index.ts"
       ],
